@@ -1,0 +1,42 @@
+<!--<div *ngIf="this.category === 'country'">
+  <select  (change)="setSelected($event.target)">
+    <option *ngFor="let dd of this.dropdowns" [value]="dd.value" 
+          data-category="country">{{dd.value}}</option>
+  </select>
+</div> 
+<div *ngIf="this.category === 'state'">
+  <select  (change)="setSelected($event.target)">
+    <option *ngFor="let dd of this.dropdowns" [value]="dd.value" 
+          data-category="state">{{dd.value}}</option>
+  </select>
+</div> 
+<div *ngIf="this.category === 'city'">
+  <select  (change)="setSelected($event.target)">
+    <option *ngFor="let dd of this.dropdowns" [value]="dd.value" 
+          data-category="city">{{dd.value}}</option>
+  </select>
+</div> -->
+
+<div *ngIf="this.countries">
+  <select  (change)="0">
+    <option *ngFor="let dd of this.countries" [ngValue]="dd.value">
+      {{dd.value}}
+    </option>
+  </select>
+</div>
+
+<div *ngIf="this.states">
+    <select  (change)="setSelected($event.target)">
+      <option *ngFor="let dd of this.states" [ngValue]="dd.value">
+        {{dd.value}}
+      </option>
+    </select>
+</div>
+
+<div *ngIf="this.cities">
+    <select  (change)="setSelected($event.target)">
+      <option *ngFor="let dd of this.cities" [ngValue]="dd.value">
+        {{dd.value}}
+      </option>
+    </select>
+  </div>

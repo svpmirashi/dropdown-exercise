@@ -1,0 +1,7 @@
+<span *ngIf="data">
+  <select (change)="onDropdownSelection($event.target.value)">
+    <option *ngFor="let item of data" 
+      [value]= "'id:' + item.id + ',value:' + item.value + ',category:' + item.category + ',parentId:' + item.parentId"
+    >{{item.value}}</option>
+  </select>
+</span>

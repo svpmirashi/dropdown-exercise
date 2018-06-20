@@ -1,0 +1,13 @@
+<div style="text-align:center;">
+  <h1>
+    Country - State - City Dropdowns: Component Communication Example
+  </h1>
+  <form (ngSubmit)="submit()" #ddForm="ngForm">
+    <app-geocombobox [data]="this.countries" (dataSelection)="onDataSelection($event)"></app-geocombobox>
+    <app-geocombobox [data]="this.states" (dataSelection)="onDataSelection($event)"></app-geocombobox>
+    <app-geocombobox [data]="this.cities" (dataSelection)="onDataSelection($event)"></app-geocombobox>
+
+    <button [disabled]="!this.isValid" >Submit</button>
+    <h2>Valid? : {{this.isValid}}</h2>
+  </form>
+</div>
